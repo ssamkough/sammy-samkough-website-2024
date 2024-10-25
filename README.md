@@ -2,6 +2,11 @@
 
 new website 2024
 
+## todos
+
+- add archive
+  - each tag is it's own dynamic page
+
 ## examples
 
 - https://www.jim-nielsen.com/

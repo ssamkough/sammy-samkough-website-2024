@@ -1,40 +1,39 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
 import { NAVIGATION, TITLES } from "../utils/constants";
+
 const TITLE = TITLES.home;
 ---
 
-<Layout title={TITLE}>
-  <main>
-    <div class="grid">
-      {
-        NAVIGATION.filter(({ title }) => TITLE !== title).map(
-          ({ title, path, color, backgroundColor }) => {
-            if (path) {
-              return (
-                <a
-                  href={path}
-                  class="grid-item"
-                  style={`color: ${color}; background-color: ${backgroundColor}`}
-                >
-                  {title}
-                </a>
-              );
-            }
+<HomeLayout title={TITLE}>
+  <div class="grid">
+    {
+      NAVIGATION.filter(({ title }) => TITLE !== title).map(
+        ({ title, path, color, backgroundColor }) => {
+          if (path) {
             return (
-              <div
+              <a
+                href={path}
                 class="grid-item"
                 style={`color: ${color}; background-color: ${backgroundColor}`}
               >
                 {title}
-              </div>
+              </a>
             );
           }
-        )
-      }
-    </div>
-  </main>
-</Layout>
+          return (
+            <div
+              class="grid-item"
+              style={`color: ${color}; background-color: ${backgroundColor}`}
+            >
+              {title}
+            </div>
+          );
+        }
+      )
+    }
+  </div>
+</HomeLayout>
 
 <style>
   .grid {

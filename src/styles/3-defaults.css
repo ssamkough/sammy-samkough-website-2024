@@ -1,0 +1,24 @@
+p {
+  margin-block: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-top: 10px;
+}
+
+.bonny-text {
+  color: var(--bonny-pink);
+}
+
+.systems-text {
+  color: var(--bonny-green);
+}
+
+.rhythm-text {
+  font-family: "Rhythm";
+  font-weight: 500;
+}
