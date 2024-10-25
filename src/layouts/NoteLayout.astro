@@ -1,0 +1,38 @@
+---
+import { formattedNoteDate } from "../utils/dates";
+import PageLayout from "./PageLayout.astro";
+
+const { frontmatter } = Astro.props;
+const formattedPublishedDate = formattedNoteDate(frontmatter.publishedDate);
+const formattedUpdatedDate = formattedNoteDate(frontmatter.updatedDate);
+---
+
+<PageLayout title={frontmatter.title}>
+  <div>
+    <div>
+      <p>
+        <strong>published date</strong>: {formattedPublishedDate}
+      </p>
+      {
+        frontmatter.updatedDate && (
+          <p>
+            <strong>updated date</strong>: {formattedUpdatedDate}
+          </p>
+        )
+      }
+      <p><em>{frontmatter.description}</em></p>
+    </div>
+    <hr />
+    <article>
+      <slot />
+      {
+        frontmatter.updatedDate && (
+          <p>
+            last updated on
+            <time datetime={formattedUpdatedDate}>{formattedUpdatedDate}</time>
+          </p>
+        )
+      }
+    </article>
+  </div>
+</PageLayout>

@@ -3,7 +3,9 @@ import PageLayout from "../../layouts/PageLayout.astro";
 
 const firstDate = new Date("2023-10-08");
 const secondDate = new Date();
-const daysPassed = Math.round((secondDate - firstDate) / (1000 * 60 * 60 * 24));
+const daysPassed = Math.round(
+  (secondDate.valueOf() - firstDate.valueOf()) / (1000 * 60 * 60 * 24)
+);
 const daysPassedText = daysPassed
   ? `it's been ${daysPassed} days of genocide`
   : "...";

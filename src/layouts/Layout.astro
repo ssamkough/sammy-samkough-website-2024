@@ -23,6 +23,12 @@ const pageTitle = `${title} | ${TITLE}`;
     <meta property="og:description" content={DESCRIPTION} />
     <meta property="og:url" content="https://sammy.pizza" />
     <meta property="og:site_name" content={TITLE} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={TITLE}
+      href={new URL("rss.xml", Astro.site)}
+    />
   </head>
   <body>
     <slot />

@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import { TITLES } from "../../utils/constants";
+import { formattedNoteDate } from "../../utils/dates";
+
+const allPosts = await getCollection("notes");
+---
+
+<PageLayout title={TITLES.notes}>
+  <p>these are all of my notes:</p>
+  <ul>
+    {
+      allPosts.map((post) => (
+        <li>
+          <a href={`/notes/${post.slug}`}>{post.data.title}</a>{" "}
+          <span>({formattedNoteDate(post.data.publishedDate)})</span>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>
