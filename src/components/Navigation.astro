@@ -22,7 +22,13 @@ const { title: pageTitle } = Astro.props;
     display: flex;
     gap: 8px;
   }
-  .active {
+  a {
+    color: blue;
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+  a.active {
     color: red;
   }
 </style>

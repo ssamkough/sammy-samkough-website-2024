@@ -1,6 +1,7 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import MarkdownIt from "markdown-it";
+import sanitize from "sanitize-html";
 const parser = new MarkdownIt();
 
 export async function GET(context) {
@@ -29,9 +30,9 @@ export async function GET(context) {
         link: `/notes/${note.slug}`,
 
         // Note: this will not process components or JSX expressions in MDX files.
-        // content: sanitizeHtml(parser.render(post.body), {
-        //   allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
-        // }),
+        content: sanitize(parser.render(note.body), {
+          allowedTags: sanitize.defaults.allowedTags.concat(["img"]),
+        }),
       };
       return obj;
     }),
