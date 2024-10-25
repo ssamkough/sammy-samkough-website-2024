@@ -33,11 +33,10 @@ export async function GET(context) {
         //   allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
         // }),
       };
-      console.log("opbk", obj);
       return obj;
     }),
 
     // (optional) inject custom xml
-    // customData: `<language>en-us</language>`,
+    customData: `<language>en-us</language>`,
   });
 }
