@@ -1,20 +1,28 @@
 ---
-interface Props {
-  title: string;
-}
+import type { TitleProps } from "../utils/types";
 
+interface Props extends TitleProps {}
+
+const DESCRIPTION = "Sammy Samkough's Website";
+const TITLE = "sammy samkough";
 const { title } = Astro.props;
+const pageTitle = `${title} | ${TITLE}`;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={DESCRIPTION} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{pageTitle}</title>
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={DESCRIPTION} />
+    <meta property="og:url" content="https://sammy.pizza" />
+    <meta property="og:site_name" content={TITLE} />
   </head>
   <body>
     <slot />

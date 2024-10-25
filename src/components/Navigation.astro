@@ -1,0 +1,28 @@
+---
+import { NAVIGATION } from "../utils/constants";
+import type { TitleProps } from "../utils/types";
+
+interface Props extends TitleProps {}
+
+const { title: pageTitle } = Astro.props;
+---
+
+<nav>
+  {
+    NAVIGATION.map(({ path, title }) => (
+      <a href={path} class={pageTitle === title ? "active" : ""}>
+        {title}
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 8px;
+  }
+  .active {
+    color: red;
+  }
+</style>

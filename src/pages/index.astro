@@ -1,63 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const ITEMS = [
-  {
-    title: "home",
-    path: "/",
-    color: "#FFBABA",
-    backgroundColor: "#BAFFDF",
-  },
-  { title: "website", color: "#A81C1C", backgroundColor: "#1C9AA8" },
-  {
-    title: "about",
-    path: "/about",
-    color: "#BABDFF",
-    backgroundColor: "#FFDFBA",
-  },
-  {
-    title: "works",
-    path: "/works",
-    color: "#FBBAFF",
-    backgroundColor: "#F2FFBA",
-  },
-  { title: "sammy", color: "#751CA8", backgroundColor: "#A8831C" },
-  { title: "samkough", color: "#A85D1C", backgroundColor: "#1CA82A" },
-  {
-    title: "contact",
-    path: "/contact",
-    color: "#FFEBBA",
-    backgroundColor: "#D2BAFF",
-  },
-  {
-    title: "notes",
-    path: "/notes",
-    color: "#BAF9FF",
-    backgroundColor: "#FFBABA",
-  },
-];
+import { NAVIGATION, TITLES } from "../utils/constants";
+const TITLE = TITLES.home;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={TITLE}>
   <main>
     <div class="grid">
       {
-        ITEMS.map(({ title, path, color, backgroundColor }) =>
-          path ? (
-            <a
-              href={path}
-              class="grid-item"
-              style={`color: ${color}; background-color: ${backgroundColor}`}
-            >
-              {title}
-            </a>
-          ) : (
-            <div
-              class="grid-item"
-              style={`color: ${color}; background-color: ${backgroundColor}`}
-            >
-              {title}
-            </div>
-          )
+        NAVIGATION.filter(({ title }) => TITLE !== title).map(
+          ({ title, path, color, backgroundColor }) => {
+            if (path) {
+              return (
+                <a
+                  href={path}
+                  class="grid-item"
+                  style={`color: ${color}; background-color: ${backgroundColor}`}
+                >
+                  {title}
+                </a>
+              );
+            }
+            return (
+              <div
+                class="grid-item"
+                style={`color: ${color}; background-color: ${backgroundColor}`}
+              >
+                {title}
+              </div>
+            );
+          }
         )
       }
     </div>
@@ -73,7 +45,7 @@ const ITEMS = [
   .grid-item {
     min-width: 200px;
     max-width: 800px;
-    height: 200px;
+    height: 240px;
     border: 1px solid black;
     display: flex;
     justify-content: center;

@@ -1,0 +1,19 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import { TITLES } from "../../utils/constants";
+
+const ITEMS = [{ title: "palestine", href: "palestine" }];
+---
+
+<PageLayout title={TITLES.activism}>
+  <p>here are things im fighting for:</p>
+  <ul>
+    {
+      ITEMS.map(({ title, href }) => (
+        <li>
+          <a href={`/activism/${href}`}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>

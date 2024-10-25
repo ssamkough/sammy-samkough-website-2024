@@ -1,0 +1,150 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+
+const firstDate = new Date("2023-10-08");
+const secondDate = new Date();
+const daysPassed = Math.round((secondDate - firstDate) / (1000 * 60 * 60 * 24));
+const daysPassedText = daysPassed
+  ? `it's been ${daysPassed} days of genocide`
+  : "...";
+---
+
+<PageLayout title="palestine">
+  <h2>
+    <span class="fp-free-text">free</span>
+    <span class="fp-palestine-text">palestine</span>
+  </h2>
+
+  <h3 class="ftrtts-text">
+    <em>from the river to the sea</em>
+  </h3>
+
+  <p>
+    <a
+      href="https://decolonizepalestine.com/introduction-to-palestine/"
+      target="_blank">it didnt start on october 7th 2023</a
+    >
+  </p>
+  <br />
+
+  <hr />
+  <br />
+
+  <div class="main-message">
+    <div>The martyr Kareem Mohammed Abu Shamala</div>
+    <div><br /></div>
+    <div>
+      His father wrote: "Tomorrow, November 5th, marks Kareem's ninth birthday.
+      How Kareem had been looking forward to this day for three months, counting
+      the days. He invited all his friends and his cousins a while ago, saying,
+      'I want to have a big party.' Just two hours before his martyrdom, while
+      we were having lunch, he said to me, 'Ten days until my birthday.'&nbsp;
+    </div>
+    <div><br /></div>
+    <div>
+      What keeps me patient is knowing that you, Kareem, are in heaven with your
+      grandfather, Samir, your grandmother, Aziza, your uncle, Ayman, and his
+      wife and children—Samir, Yamen, Mira, Aboud—alongside your cousin,
+      Hussein, his mother, your uncle, Ismail, with his wife, Mohammed, Zeina,
+      your uncle, Ahmed, along with your friends, Aksu, Youssef, Lara, Saleh,
+      your uncle, Habib, your friend, Ibrahim, alongside your aunt, Rula, your
+      aunt, Leena, and your cousin, Wisam. Now you can celebrate your birthday
+      in heaven with them, all happy, away from this dark world. Take gifts,
+      Kareem, and toys as you wish. You can play billiards and PlayStation
+      comfortably, and I won't tell you as usual, 'That's enough playing, go to
+      sleep.' Happy birthday, my dear.
+    </div>
+    <div><br /></div>
+    <div>
+      Your brother, Samir, sends his regards and always asks about you. Your
+      mother talks to your pictures every night. Come and enhance our dreams.
+      But tell your grandfather, Samir, before he asks where you went, 'May God
+      make it easy for you, my dear.'"
+    </div>
+  </div>
+  <br />
+
+  <hr />
+  <br />
+
+  <h2>resources</h2>
+  <ul>
+    <li>
+      new to palestine:
+      <a href="https://decolonizepalestine.com">decolonizepalestine.com</a>
+    </li>
+    <ul>
+      <li>
+        common faqs:
+        <a href="https://decolonizepalestine.com/faq"
+          >decolonizepalestine.com/faq</a
+        >
+      </li>
+    </ul>
+    <li>
+      boycott, divestment, sanctions (BDS):
+      <a href="https://bdsmovement.net/what-is-bds"
+        >bdsmovement.net/what-is-bds</a
+      >
+    </li>
+    <ul>
+      <li>
+        common faqs:
+        <a href="https://bdsmovement.net/faqs">bdsmovement.net/faqs</a>
+      </li>
+    </ul>
+    <li>
+      encyclopedia of everything palestine:
+      <a href="https://www.palquest.org">palquest.org</a>
+    </li>
+  </ul>
+  <br />
+
+  <h3>stories</h3>
+  <ul>
+    <li>
+      <a
+        href="https://wearenotnumbers.org/late-night-in-eden-in-winter-and-in-war"
+        >wearenotnumbers.org/late-night-in-eden-in-winter-and-in-war</a
+      >
+    </li>
+  </ul>
+  <br />
+
+  <h2><span id="days-passed">{daysPassedText}</span></h2>
+  <br />
+
+  <iframe
+    id="innerFrame"
+    name="innerFrame"
+    sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-storage-access-by-user-activation"
+    allowfullscreen=""
+    src="https://datawrapper.dwcdn.net/SAgXc/2/"
+    style="max-width: 500px; width: 100%; height: 500px; overflow: auto"
+  >
+  </iframe>
+  <br />
+  <br />
+</PageLayout>
+
+<style>
+  .fp-free-text {
+    color: hsla(124, 100%, 25%, 1);
+  }
+
+  .fp-palestine-text {
+    color: hsla(3, 100%, 47%, 1);
+  }
+
+  .ftrtts-text {
+    color: hsla(217, 100%, 47%, 1);
+  }
+  .main-message {
+    max-width: 800px;
+    overflow-wrap: break-word;
+    -webkit-nbsp-mode: space;
+    line-break: after-white-space;
+    border: 2px inset black;
+    padding: 20px;
+  }
+</style>

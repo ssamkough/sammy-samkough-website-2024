@@ -1,0 +1,63 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { TITLES } from "../utils/constants";
+
+const ACTIVE_ITEMS = [
+  {
+    title: "one place a day",
+    href: "https://oneplaceaday.com",
+  },
+  {
+    title: "custom resume",
+    href: "https://www.customresume.xyz",
+  },
+  {
+    title: "ranked choice voting",
+    href: "https://rcv.sammy.pizza/",
+  },
+];
+
+const ARCHIVED_ITEMS = [
+  {
+    title: "the render archive website",
+    href: "https://therenderarchive.com/",
+  },
+  {
+    title: "pikmin decompilation website",
+    href: "https://pikmin.dev/",
+  },
+  {
+    title: "make an app everyday journey",
+    href: "https://github.com/ssamkough/maej",
+  },
+];
+---
+
+<PageLayout title={TITLES.projects}>
+  <p>here are active projects:</p>
+  <ul>
+    {
+      ACTIVE_ITEMS.map(({ title, href }) => (
+        <li>
+          <a href={href}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <p>here are archived projects:</p>
+  <ul>
+    {
+      ARCHIVED_ITEMS.map(({ title, href }) => (
+        <li>
+          <a href={href}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>
+
+<style>
+  li {
+    margin-top: 10px;
+  }
+</style>

@@ -1,0 +1,12 @@
+---
+import type { TitleProps } from "../utils/types";
+import Navigation from "./Navigation.astro";
+
+interface Props extends TitleProps {}
+
+const { title } = Astro.props;
+---
+
+<header>
+  <Navigation title={title} />
+</header>
