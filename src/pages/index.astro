@@ -1,12 +1,15 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
-import { NAVIGATION, TITLES } from "../utils/constants";
+import { TITLES } from "../utils/constants";
 
 const TITLE = TITLES.home;
 ---
 
 <HomeLayout title={TITLE}>
-  <div class="grid">
+  <div>
+    <h1>under construction</h1>
+  </div>
+  <!-- <div class="grid">
     {
       NAVIGATION.filter(({ title }) => TITLE !== title).map(
         ({ title, path, color, backgroundColor }) => {
@@ -32,7 +35,7 @@ const TITLE = TITLES.home;
         }
       )
     }
-  </div>
+  </div> -->
 </HomeLayout>
 
 <style>
