@@ -9,8 +9,12 @@ const { title: pageTitle } = Astro.props;
 
 <nav>
   {
-    NAVIGATION.map(({ path, title }) => (
-      <a href={path} class={pageTitle === title ? "active" : ""}>
+    NAVIGATION.map(({ path, title, color, backgroundColor }) => (
+      <a
+        href={path}
+        class={pageTitle === title ? "active" : ""}
+        style={`color: ${color}; background-color: ${backgroundColor}`}
+      >
         {title}
       </a>
     ))
@@ -20,10 +24,13 @@ const { title: pageTitle } = Astro.props;
 <style>
   nav {
     display: flex;
-    gap: 8px;
+    flex-direction: column;
+    gap: 1em;
   }
   a {
-    color: blue;
+    color: rgb(1, 1, 1);
+    font-size: 1.6em;
+    width: 100%;
   }
   a:hover {
     opacity: 0.6;

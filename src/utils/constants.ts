@@ -23,8 +23,8 @@ export const NAVIGATION: NavigationItem[] = [
   {
     title: "home",
     path: "/",
-    color: "#FFBABA",
-    backgroundColor: "#BAFFDF",
+    color: "#2ecf12ff",
+    backgroundColor: "#cb7418ff",
   },
   {
     title: "about",

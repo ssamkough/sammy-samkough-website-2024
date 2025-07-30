@@ -4,27 +4,31 @@ import { TITLES } from "../utils/constants";
 
 const ACTIVE_ITEMS = [
   {
+    title: "snarfs",
+    href: "https://snarfs.my",
+  },
+  {
     title: "one place a day",
     href: "https://oneplaceaday.com",
   },
   {
     title: "custom resume",
-    href: "https://www.customresume.xyz",
+    // href: "https://www.customresume.xyz",
   },
   {
     title: "ranked choice voting",
-    href: "https://rcv.sammy.pizza/",
+    href: "https://rcv.sammy.pizza",
   },
 ];
 
 const ARCHIVED_ITEMS = [
   {
     title: "the render archive website",
-    href: "https://therenderarchive.com/",
+    // href: "https://therenderarchive.com",
   },
   {
     title: "pikmin decompilation website",
-    href: "https://pikmin.dev/",
+    // href: "https://pikmin.dev",
   },
   {
     title: "make an app everyday journey",
@@ -34,13 +38,11 @@ const ARCHIVED_ITEMS = [
 ---
 
 <PageLayout title={TITLES.projects}>
-  <p>here are active projects:</p>
+  <p>here are active / maintenance projects:</p>
   <ul>
     {
       ACTIVE_ITEMS.map(({ title, href }) => (
-        <li>
-          <a href={href}>{title}</a>
-        </li>
+        <li>{href ? <a href={href}>{title}</a> : <span>{title}</span>}</li>
       ))
     }
   </ul>
@@ -48,9 +50,7 @@ const ARCHIVED_ITEMS = [
   <ul>
     {
       ARCHIVED_ITEMS.map(({ title, href }) => (
-        <li>
-          <a href={href}>{title}</a>
-        </li>
+        <li>{href ? <a href={href}>{title}</a> : <span>{title}</span>}</li>
       ))
     }
   </ul>
