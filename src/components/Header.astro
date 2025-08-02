@@ -1,6 +1,4 @@
 ---
-import PinkSquare from "./PinkSquare.astro";
-
 /**
  * Note: space on website to use as a call-to-action
  */
@@ -9,7 +7,7 @@ const { hidePinkSquare } = Astro.props;
 ---
 
 <header>
-  {
+  <!-- {
     !hidePinkSquare ? (
       <div class="pink-container">
         <a href="/">
@@ -17,7 +15,7 @@ const { hidePinkSquare } = Astro.props;
         </a>
       </div>
     ) : null
-  }
+  } -->
   <p>
     There is an ongoing genocide happening to the <span
       style="color:var(--palestine-red);">Palestinian</span
