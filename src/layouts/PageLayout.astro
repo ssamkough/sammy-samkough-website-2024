@@ -10,7 +10,6 @@ const { title } = Astro.props;
 
 <Layout title={title}>
   <div>
-    <!-- <Header title={title} /> -->
     <main>
       <h1>{title}</h1>
       <slot />
@@ -21,11 +20,9 @@ const { title } = Astro.props;
 </Layout>
 
 <style>
-  div {
-    max-width: 600px;
-  }
   main {
     padding: 10px;
+    max-width: 600px;
     min-height: 100dvh;
   }
 </style>

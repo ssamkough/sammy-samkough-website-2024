@@ -1,0 +1,44 @@
+---
+import PageLayout from "../../../layouts/PageLayout.astro";
+
+const ORGANIZATIONS = [
+  {
+    title: "Anera",
+    href: "https://www.anera.org/donate",
+  },
+  {
+    title: "PACC USA",
+    href: "https://www.paccusa.org/donate.html",
+  },
+  {
+    title: "Palestine Legal",
+    href: "https://palestinelegal.org/donate",
+  },
+];
+---
+
+<PageLayout title="Organizations">
+  <p>
+    These are organizations that are helping the Palestine peoples in a variety
+    of different ways.
+  </p>
+  <p>
+    This is by no means a comprehensive list. This is but a fraction of
+    organizations that are helping the Palestinian peoples.
+  </p>
+  <p>
+    Whether directly addressing the needs of the Palestinian people on the
+    ground, helping Palestinians in the diaspora, or protecting activists in
+    support of Palestine, these are trusted organizations.
+  </p>
+  <hr />
+  <ul>
+    {
+      ORGANIZATIONS.map(({ title, href }) => (
+        <li>
+          <a href={href}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</PageLayout>

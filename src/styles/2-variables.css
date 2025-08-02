@@ -1,5 +1,8 @@
 :root {
   /* colors */
+  --pink-square: rgb(239 154 154);
   --bonny-pink: #d66cd3;
   --bonny-green: #56d595;
+  --palestine-red: hsla(3, 100%, 47%, 1);
+  --palestine-green: hsla(124, 100%, 25%, 1);
 }

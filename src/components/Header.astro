@@ -1,18 +1,52 @@
 ---
-import type { TitleProps } from "../utils/types";
-import Navigation from "./Navigation.astro";
+import PinkSquare from "./PinkSquare.astro";
 
-interface Props extends TitleProps {}
+/**
+ * Note: space on website to use as a call-to-action
+ */
 
-const { title } = Astro.props;
+const { hidePinkSquare } = Astro.props;
 ---
 
 <header>
-  <Navigation title={title} />
+  {
+    !hidePinkSquare ? (
+      <div class="pink-container">
+        <a href="/">
+          <PinkSquare />
+        </a>
+      </div>
+    ) : null
+  }
+  <p>
+    There is an ongoing genocide happening to the <span
+      style="color:var(--palestine-red);">Palestinian</span
+    >
+    <span style="color:var(--palestine-green);">people</span>.
+  </p>
+  <p>
+    Stay <a href="/activism/palestine">informed</a>, donate to
+    <a href="/activism/palestine/organizations"
+      >well-intentioned organizations</a
+    >, and <a href="https://bdsmovement.net">take proper action</a>.
+  </p>
 </header>
 
 <style>
   header {
+    position: relative;
     padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  .pink-container {
+    position: absolute;
+  }
+  span {
+    font-weight: bold;
+  }
+  a {
+    color: white;
   }
 </style>

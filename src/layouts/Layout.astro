@@ -1,15 +1,19 @@
 ---
+import Header from "../components/Header.astro";
 import "../styles/1-globals.css";
 import "../styles/2-variables.css";
 import "../styles/3-defaults.css";
 
 import type { TitleProps } from "../utils/types";
 
-interface Props extends TitleProps {}
+interface Props extends TitleProps {
+  hidePinkSquare?: boolean;
+}
 
 const DESCRIPTION = "Sammy Samkough's Website";
 const TITLE = "sammy samkough";
-const { title } = Astro.props;
+
+const { title, hidePinkSquare } = Astro.props;
 const pageTitle = `${title} | ${TITLE}`;
 ---
 
@@ -36,6 +40,7 @@ const pageTitle = `${title} | ${TITLE}`;
     />
   </head>
   <body>
+    <Header hidePinkSquare={hidePinkSquare} />
     <slot />
   </body>
 </html>

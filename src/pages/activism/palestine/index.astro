@@ -1,5 +1,5 @@
 ---
-import PageLayout from "../../layouts/PageLayout.astro";
+import PageLayout from "../../../layouts/PageLayout.astro";
 
 const firstDate = new Date("2023-10-08");
 const secondDate = new Date();
@@ -131,11 +131,11 @@ const daysPassedText = daysPassed
 
 <style>
   .fp-free-text {
-    color: hsla(124, 100%, 25%, 1);
+    color: var(--palestine-green);
   }
 
   .fp-palestine-text {
-    color: hsla(3, 100%, 47%, 1);
+    color: var(--palestine-red);
   }
 
   .ftrtts-text {

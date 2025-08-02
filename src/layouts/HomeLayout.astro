@@ -2,12 +2,14 @@
 import type { TitleProps } from "../utils/types";
 import Layout from "./Layout.astro";
 
-interface Props extends TitleProps {}
+interface Props extends TitleProps {
+  hidePinkSquare?: boolean;
+}
 
-const { title } = Astro.props;
+const { title, hidePinkSquare } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout title={title} hidePinkSquare={hidePinkSquare}>
   <main>
     <slot />
   </main>

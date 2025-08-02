@@ -5,7 +5,7 @@ import { NAVIGATION, TITLES } from "../utils/constants";
 const TITLE = TITLES.home;
 ---
 
-<HomeLayout title={TITLE}>
+<HomeLayout hidePinkSquare title={TITLE}>
   <div class="grid">
     {
       NAVIGATION.filter(({ title }) => TITLE !== title).map(
