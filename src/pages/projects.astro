@@ -13,7 +13,7 @@ const ACTIVE_ITEMS = [
   },
   {
     title: "custom resume",
-    // href: "https://www.customresume.xyz",
+    href: "https://customresume.sammy.pizza",
   },
   {
     title: "ranked choice voting",
@@ -23,22 +23,49 @@ const ACTIVE_ITEMS = [
 
 const ARCHIVED_ITEMS = [
   {
+    title: "hangul house",
+    href: "https://hangulhouse.sammy.pizza",
+  },
+  {
+    title: "kana kove",
+    href: "https://kanakove.sammy.pizza",
+  },
+  {
+    title: "njcoronavirus",
+    href: "https://njcoronavirus.sammy.pizza",
+  },
+  {
     title: "the render archive website",
-    // href: "https://therenderarchive.com",
+    href: "https://renderarchive.sammy.pizza",
   },
   {
     title: "pikmin decompilation website",
-    // href: "https://pikmin.dev",
+    href: "https://pikmindecomp.sammy.pizza",
   },
   {
     title: "make an app everyday journey",
-    href: "https://github.com/ssamkough/maej",
+    href: "https://samkoughmaej.weebly.com",
+  },
+];
+
+const OTHER_ITEMS = [
+  {
+    title: "varygeek",
+    href: "https://marej.red",
+  },
+  {
+    title: "cuny law 2025 commencement",
+    href: "https://cunylaw2025.com",
+  },
+  {
+    title: "samkough",
+    href: "https://samkough.com",
   },
 ];
 ---
 
 <PageLayout title={TITLES.projects}>
-  <p>here are active / maintenance projects:</p>
+  <p>here are active projects:</p>
   <ul>
     {
       ACTIVE_ITEMS.map(({ title, href }) => (
@@ -50,6 +77,14 @@ const ARCHIVED_ITEMS = [
   <ul>
     {
       ARCHIVED_ITEMS.map(({ title, href }) => (
+        <li>{href ? <a href={href}>{title}</a> : <span>{title}</span>}</li>
+      ))
+    }
+  </ul>
+  <p>other:</p>
+  <ul>
+    {
+      OTHER_ITEMS.map(({ title, href }) => (
         <li>{href ? <a href={href}>{title}</a> : <span>{title}</span>}</li>
       ))
     }
