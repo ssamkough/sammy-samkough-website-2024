@@ -63,4 +63,10 @@ export const NAVIGATION: NavigationItem[] = [
     color: "#FFEBBA",
     backgroundColor: "#A378F3",
   },
+  {
+    title: "colophon",
+    path: "/colophon",
+    color: "#2d2b24ff",
+    backgroundColor: "#a69b81ff",
+  },
 ];
