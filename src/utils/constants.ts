@@ -6,6 +6,7 @@ export const TITLES = {
   projects: "projects",
   activism: "activism",
   contact: "contact",
+  colophon: "colophon",
   404: "404",
 } as const;
 
