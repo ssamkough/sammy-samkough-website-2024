@@ -15,8 +15,12 @@ interface ConsumeItem {
   end_date?: string | null;
 }
 
+export type Consumes = Array<
+  Partial<Record<ConsumeCategory, Array<ConsumeItem>>>
+>;
+
 interface Props {
-  consumes: Array<Record<ConsumeCategory, Array<ConsumeItem>>>;
+  consumes: Consumes;
   isRecent: boolean;
 }
 

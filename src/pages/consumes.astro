@@ -1,9 +1,9 @@
 ---
-import Consumes from "../components/Consumes.astro"
 import PageLayout from "../layouts/PageLayout.astro";
+import ConsumesList, { type Consumes } from "../components/ConsumesList.astro";
 import { TITLES } from "../utils/constants";
 
-const CONSUMES = [
+const CONSUMES: Consumes = [
   {
     books: [
       {
@@ -141,13 +141,13 @@ const CONSUMES = [
 
   <h2 id="current">current</h2>
   <p>here are things i currently / recently consumed:</p>
-  <Consumes isRecent consumes={CONSUMES} />
+  <ConsumesList isRecent consumes={CONSUMES} />
 
   <br />
 
   <h2 id="past">past</h2>
   <p>here are notable things ive consumed in the past:</p>
-  <Consumes isRecent={false} consumes={CONSUMES} />
+  <ConsumesList isRecent={false} consumes={CONSUMES} />
 </PageLayout>
 
 <style>
