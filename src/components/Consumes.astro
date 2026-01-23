@@ -1,0 +1,47 @@
+---
+type ConsumeCategory =
+  | "books"
+  | "movies"
+  | "music"
+  | "podcasts"
+  | "shows"
+  | "video games";
+
+interface ConsumeItem {
+  name: string;
+  is_recent: boolean;
+  link?: string | null;
+  start_date?: string | null;
+  end_date?: string | null;
+}
+
+interface Props {
+  consumes: Array<Record<ConsumeCategory, Array<ConsumeItem>>>;
+  isRecent: boolean;
+}
+
+const { consumes, isRecent } = Astro.props;
+---
+
+<ul>
+  {
+    consumes.map((obj) => {
+      const key = Object.keys(obj)[0];
+      const items = Object.values(obj)[0];
+      return (
+        <>
+          <li>{key}</li>
+          <ul>
+            {items
+              .filter((item) => item.is_recent === isRecent)
+              .map((item) => (
+                <li>
+                  {item?.link ? <a href={item.link}>{item.name}</a> : item.name}
+                </li>
+              ))}
+          </ul>
+        </>
+      );
+    })
+  }
+</ul>

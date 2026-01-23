@@ -6,6 +6,7 @@ export const TITLES = {
   projects: "projects",
   activism: "activism",
   contact: "contact",
+  consumes: "consumes",
   colophon: "colophon",
   404: "404",
 } as const;
@@ -62,6 +63,12 @@ export const NAVIGATION: NavigationItem[] = [
     path: "/contact",
     color: "#FFEBBA",
     backgroundColor: "#A378F3",
+  },
+  {
+    title: "consumes",
+    path: "/consumes",
+    color: "#03e8fc",
+    backgroundColor: "#f76fc1",
   },
   {
     title: "colophon",
