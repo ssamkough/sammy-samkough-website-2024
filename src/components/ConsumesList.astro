@@ -1,23 +1,5 @@
 ---
-type ConsumeCategory =
-  | "books"
-  | "movies"
-  | "music"
-  | "podcasts"
-  | "shows"
-  | "video games";
-
-interface ConsumeItem {
-  name: string;
-  is_recent: boolean;
-  link?: string | null;
-  start_date?: string | null;
-  end_date?: string | null;
-}
-
-export type Consumes = Array<
-  Partial<Record<ConsumeCategory, Array<ConsumeItem>>>
->;
+import type { Consumes } from "../utils/types";
 
 interface Props {
   consumes: Consumes;
@@ -33,7 +15,7 @@ const { consumes, isRecent } = Astro.props;
       const key = Object.keys(obj)[0];
       const items = Object.values(obj)[0];
       return (
-        <>
+        <div>
           <li>{key}</li>
           <ul>
             {items
@@ -44,7 +26,7 @@ const { consumes, isRecent } = Astro.props;
                 </li>
               ))}
           </ul>
-        </>
+        </div>
       );
     })
   }
