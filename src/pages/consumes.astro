@@ -1,6 +1,6 @@
 ---
-import PageLayout from "../layouts/PageLayout.astro";
 import ConsumesList from "../components/ConsumesList.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 import { CONSUMES, TITLES } from "../utils/constants";
 ---
 
@@ -23,13 +23,19 @@ import { CONSUMES, TITLES } from "../utils/constants";
 
   <h2 id="current">current</h2>
   <p>here are things i currently / recently consumed:</p>
-  <ConsumesList isRecent consumes={CONSUMES} />
+  <ConsumesList type="current" consumes={CONSUMES} />
+
+  <br />
+
+  <h2 id="current">must</h2>
+  <p>here are things i must get to:</p>
+  <ConsumesList type="must" consumes={CONSUMES} />
 
   <br />
 
   <h2 id="past">past</h2>
-  <p>here are notable things ive consumed in the past:</p>
-  <ConsumesList isRecent={false} consumes={CONSUMES} />
+  <p>here are things ive consumed in the past:</p>
+  <ConsumesList type="past" consumes={CONSUMES} />
 </PageLayout>
 
 <style>

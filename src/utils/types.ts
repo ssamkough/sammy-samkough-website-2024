@@ -10,9 +10,11 @@ type ConsumeCategory =
   | "shows"
   | "video games";
 
+export type ConsumeType = "current" | "must" | "past";
+
 interface ConsumeItem {
   name: string;
-  is_recent: boolean;
+  type: ConsumeType;
   link?: string | null;
   start_date?: string | null;
   end_date?: string | null;

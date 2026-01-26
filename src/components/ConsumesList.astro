@@ -1,12 +1,12 @@
 ---
-import type { Consumes } from "../utils/types";
+import type { Consumes, ConsumeType } from "../utils/types";
 
 interface Props {
   consumes: Consumes;
-  isRecent: boolean;
+  type: ConsumeType;
 }
 
-const { consumes, isRecent } = Astro.props;
+const { consumes, type } = Astro.props;
 ---
 
 <ul>
@@ -19,7 +19,7 @@ const { consumes, isRecent } = Astro.props;
           <li>{key}</li>
           <ul>
             {items
-              .filter((item) => item.is_recent === isRecent)
+              .filter((item) => item.type === type)
               .map((item) => (
                 <li>
                   {item?.link ? <a href={item.link}>{item.name}</a> : item.name}
