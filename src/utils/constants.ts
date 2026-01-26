@@ -163,6 +163,13 @@ export const CONSUMES: Consumes = [
   {
     shows: [
       {
+        name: "Frieren: Beyond Journey's End",
+        link: null,
+        start_date: null,
+        end_date: null,
+        type: "current",
+      },
+      {
         name: "King of the Hill",
         link: null,
         start_date: null,
