@@ -1,0 +1,57 @@
+---
+import ArtsList from "../components/ArtsList.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import { ARTS, TITLES } from "../utils/constants";
+---
+
+<PageLayout title={TITLES.arts}>
+  <p>
+    <strong>arts</strong> that i'm currently engaging with, must engage with, or have
+    engaged with
+  </p>
+
+  <h3>table of contents</h3>
+  <ul>
+    <li><a href="#current">current</a></li>
+    <li><a href="#must">must</a></li>
+    <li><a href="#past">past</a></li>
+  </ul>
+
+  <hr />
+
+  <h2 id="current">current</h2>
+  <p>here are arts i currently / recently engaged with:</p>
+  <ArtsList status="current" arts={ARTS} />
+
+  <br />
+
+  <h2 id="must">must</h2>
+  <p>here are arts i must get to:</p>
+  <ArtsList status="must" arts={ARTS} />
+
+  <br />
+
+  <h2 id="past">past</h2>
+  <p>here are arts ive engaged with in the past:</p>
+  <ArtsList status="past" arts={ARTS} />
+
+  <hr />
+
+  <h2>updates</h2>
+  <details>
+    <summary>2026-01-30</summary>
+    <p>
+      i used to call these "consumes", but i have found better verbiage to use
+    </p>
+    <p>
+      instead of "consumes" it is now what it is which is "art" or "arts" that i
+      "engage with"
+    </p>
+  </details>
+</PageLayout>
+
+<style>
+  hr {
+    margin-block: 1em;
+  }
+</style>

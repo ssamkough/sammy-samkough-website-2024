@@ -1,17 +1,17 @@
 ---
-import type { Consumes, ConsumeType } from "../utils/types";
+import type { Arts, ArtStatus } from "../utils/types";
 
 interface Props {
-  consumes: Consumes;
-  type: ConsumeType;
+  arts: Arts;
+  status: ArtStatus;
 }
 
-const { consumes, type } = Astro.props;
+const { arts, status } = Astro.props;
 ---
 
 <ul>
   {
-    consumes.map((obj) => {
+    arts.map((obj) => {
       const key = Object.keys(obj)[0];
       const items = Object.values(obj)[0];
       return (
@@ -19,7 +19,7 @@ const { consumes, type } = Astro.props;
           <li>{key}</li>
           <ul>
             {items
-              .filter((item) => item.type === type)
+              .filter((item) => item.status === status)
               .map((item) => (
                 <li>
                   {item?.link ? <a href={item.link}>{item.name}</a> : item.name}

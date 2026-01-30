@@ -2,7 +2,7 @@ export interface TitleProps {
   title: string;
 }
 
-type ConsumeCategory =
+type ArtCategory =
   | "books"
   | "movies"
   | "music"
@@ -10,16 +10,14 @@ type ConsumeCategory =
   | "shows"
   | "video games";
 
-export type ConsumeType = "current" | "must" | "past";
+export type ArtStatus = "current" | "must" | "past";
 
-interface ConsumeItem {
+interface ArtItem {
   name: string;
-  type: ConsumeType;
+  status: ArtStatus;
   link?: string | null;
   start_date?: string | null;
   end_date?: string | null;
 }
 
-export type Consumes = Array<
-  Partial<Record<ConsumeCategory, Array<ConsumeItem>>>
->;
+export type Arts = Array<Partial<Record<ArtCategory, Array<ArtItem>>>>;

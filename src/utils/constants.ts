@@ -1,4 +1,4 @@
-import type { Consumes } from "./types";
+import type { Arts } from "./types";
 
 export const TITLES = {
   home: "home",
@@ -8,7 +8,7 @@ export const TITLES = {
   projects: "projects",
   activism: "activism",
   contact: "contact",
-  consumes: "consumes",
+  arts: "arts",
   colophon: "colophon",
   404: "404",
 } as const;
@@ -67,8 +67,8 @@ export const NAVIGATION: NavigationItem[] = [
     backgroundColor: "#A378F3",
   },
   {
-    title: "consumes",
-    path: "/consumes",
+    title: "arts",
+    path: "/arts",
     color: "#03e8fc",
     backgroundColor: "#f76fc1",
   },
@@ -80,7 +80,7 @@ export const NAVIGATION: NavigationItem[] = [
   },
 ];
 
-export const CONSUMES: Consumes = [
+export const ARTS: Arts = [
   {
     books: [
       {
@@ -88,14 +88,14 @@ export const CONSUMES: Consumes = [
         link: "https://www.biblegateway.com/versions/New-American-Bible-Revised-Edition-NABRE-Bible/",
         start_date: "September 2 2025",
         end_date: null,
-        type: "current",
+        status: "current",
       },
       {
         name: "Martyr!",
         link: null,
         start_date: null,
         end_date: null,
-        type: "past",
+        status: "past",
       },
     ],
   },
@@ -106,14 +106,14 @@ export const CONSUMES: Consumes = [
         link: "https://www.criterion.com/films/244-cleo-from-5-to-7",
         start_date: "January 17 2026",
         end_date: "January 17 2026",
-        type: "current",
+        status: "current",
       },
       {
         name: "House of Hummingbird",
         link: null,
         start_date: null,
         end_date: null,
-        type: "past",
+        status: "past",
       },
     ],
   },
@@ -124,14 +124,14 @@ export const CONSUMES: Consumes = [
         link: "https://gavinbryars.bandcamp.com/album/sinking-of-the-titanic",
         start_date: null,
         end_date: null,
-        type: "current",
+        status: "current",
       },
       {
         name: "Taqbir",
         link: "https://taqbir.bandcamp.com/album/taqbir",
         start_date: null,
         end_date: null,
-        type: "past",
+        status: "past",
       },
     ],
   },
@@ -142,21 +142,21 @@ export const CONSUMES: Consumes = [
         link: "https://podcasts.apple.com/us/podcast/know-your-enemy/id1462703434",
         start_date: null,
         end_date: null,
-        type: "current",
+        status: "current",
       },
       {
         name: "The Dig",
         link: "https://thedigradio.com",
         start_date: null,
         end_date: null,
-        type: "current",
+        status: "current",
       },
       {
         name: "Syria Trials",
         link: null,
         start_date: null,
         end_date: null,
-        type: "past",
+        status: "past",
       },
     ],
   },
@@ -167,21 +167,21 @@ export const CONSUMES: Consumes = [
         link: null,
         start_date: null,
         end_date: null,
-        type: "current",
+        status: "current",
       },
       {
         name: "King of the Hill",
         link: null,
         start_date: null,
         end_date: null,
-        type: "current",
+        status: "current",
       },
       {
         name: "The Sopranos",
         link: null,
         start_date: null,
         end_date: null,
-        type: "past",
+        status: "past",
       },
     ],
   },
@@ -192,21 +192,21 @@ export const CONSUMES: Consumes = [
         link: "https://www.yachtclubgames.com/games/shovel-knight-treasure-trove/",
         start_date: "July 27 2025",
         end_date: null,
-        type: "current",
+        status: "current",
       },
       {
         name: "Death Stranding",
         link: null,
         start_date: null,
         end_date: null,
-        type: "must",
+        status: "must",
       },
       {
         name: "The Legend of Zelda: Breath of the Wild",
         link: null,
         start_date: null,
         end_date: null,
-        type: "past",
+        status: "past",
       },
     ],
   },
