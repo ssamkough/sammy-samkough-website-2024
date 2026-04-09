@@ -167,14 +167,14 @@ export const ARTS: Arts = [
         link: null,
         start_date: null,
         end_date: null,
-        status: "current",
+        status: "past",
       },
       {
         name: "King of the Hill",
         link: null,
         start_date: null,
         end_date: null,
-        status: "current",
+        status: "past",
       },
       {
         name: "The Sopranos",
@@ -188,8 +188,15 @@ export const ARTS: Arts = [
   {
     "video games": [
       {
+        name: "Hollow Knight",
+        link: "https://hollowknight.com",
+        start_date: "March 26 2026",
+        end_date: null,
+        status: "current",
+      },
+      {
         name: "Shovel Knight: Treasure Trove",
-        link: "https://www.yachtclubgames.com/games/shovel-knight-treasure-trove/",
+        link: "://www.yachtclubgames.com/games/shovel-knight-treasure-trove/",
         start_date: "July 27 2025",
         end_date: null,
         status: "current",
