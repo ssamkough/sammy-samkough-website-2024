@@ -88,7 +88,7 @@ export const ARTS: Arts = [
         link: "https://www.biblegateway.com/versions/New-American-Bible-Revised-Edition-NABRE-Bible/",
         start_date: "September 2 2025",
         end_date: null,
-        status: "current",
+        status: "past",
       },
       {
         name: "Martyr!",
@@ -106,7 +106,7 @@ export const ARTS: Arts = [
         link: "https://www.criterion.com/films/244-cleo-from-5-to-7",
         start_date: "January 17 2026",
         end_date: "January 17 2026",
-        status: "current",
+        status: "past",
       },
       {
         name: "House of Hummingbird",
@@ -124,7 +124,7 @@ export const ARTS: Arts = [
         link: "https://gavinbryars.bandcamp.com/album/sinking-of-the-titanic",
         start_date: null,
         end_date: null,
-        status: "current",
+        status: "past",
       },
       {
         name: "Taqbir",
