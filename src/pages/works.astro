@@ -5,25 +5,51 @@ import { TITLES } from "../utils/constants";
 ---
 
 <PageLayout title={TITLES.works}>
-  <p>
-    currently working as a full stack engineer at <a
-      href="https://trytemelio.com/">temelio</a
-    >
-  </p>
-  <p>
-    my personal consulting shop <BonnySystems />
-  </p>
+  <ul>
+    <li>
+      full stack engineer at <a href="https://trytemelio.com/"
+        ><img src="/works/temelio-logo.svg" alt="Temelio Logo" /></a
+      >
+    </li>
+    <li>
+      onboarding to family business <a
+        href="https://unitedcleaningcorp.com"
+        class="united-cleaning-text"
+      >
+        United Cleaning
+      </a>
+    </li>
+    <li>
+      personal consulting shop at <BonnySystems />
+    </li>
+  </ul>
+
+  <br />
+
   <p>
     generic resume: <a href="https://cv.sammy.pizza">cv.sammy.pizza</a>
+  </p>
+  <p>
+    begrudginly my linkedin: <s>
+      <a href=""> https://www.linkedin.com/in/ssamkough </a>
+    </s>
   </p>
 </PageLayout>
 
 <style>
+  li {
+    padding-top: 1em;
+  }
   .bonny-text {
     color: #d66cd3;
   }
 
   .systems-text {
     color: #56d595;
+  }
+  .united-cleaning-text {
+    color: #ebe764;
+    background-color: slategray;
+    padding: 0.4em;
   }
 </style>
