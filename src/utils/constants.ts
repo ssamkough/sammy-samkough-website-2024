@@ -138,6 +138,13 @@ export const ARTS: Arts = [
   {
     podcasts: [
       {
+        name: "TrueAnon",
+        link: "https://podcast.trueanon.com",
+        start_date: null,
+        end_date: null,
+        status: "current",
+      },
+      {
         name: "Know Your Enemy",
         link: "https://podcasts.apple.com/us/podcast/know-your-enemy/id1462703434",
         start_date: null,
