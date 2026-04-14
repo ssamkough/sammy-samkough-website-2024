@@ -23,6 +23,15 @@ const { arts, status } = Astro.props;
               .map((item) => (
                 <li>
                   {item?.link ? <a href={item.link}>{item.name}</a> : item.name}
+                  {item.favorite_episodes && (
+                    <ul>
+                      {item.favorite_episodes.map((episode) => (
+                        <li>
+                          <a href={episode.link}>{episode.name}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
           </ul>

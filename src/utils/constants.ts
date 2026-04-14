@@ -157,6 +157,19 @@ export const ARTS: Arts = [
         start_date: null,
         end_date: null,
         status: "current",
+        favorite_episodes: [
+          {
+            name: "Thawra",
+            link: "https://thedigradio.com/Thawra",
+          },
+        ],
+      },
+      {
+        name: "Turbulence Podcast",
+        link: "https://turbulencepod.substack.com",
+        start_date: null,
+        end_date: null,
+        status: "current",
       },
       {
         name: "Syria Trials",
