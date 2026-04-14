@@ -80,6 +80,9 @@ export const NAVIGATION: NavigationItem[] = [
   },
 ];
 
+/**
+ * TODO: eventually turn into collection
+ */
 export const ARTS: Arts = [
   {
     books: [
