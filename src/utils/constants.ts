@@ -141,6 +141,13 @@ export const ARTS: Arts = [
   {
     podcasts: [
       {
+        name: "Bandsplain",
+        link: "https://www.theringer.com/podcasts/bandsplain",
+        start_date: null,
+        end_date: null,
+        status: "current",
+      },
+      {
         name: "TrueAnon",
         link: "https://podcast.trueanon.com",
         start_date: null,
@@ -215,14 +222,14 @@ export const ARTS: Arts = [
         link: "https://hollowknight.com",
         start_date: "March 26 2026",
         end_date: null,
-        status: "current",
+        status: "past",
       },
       {
         name: "Shovel Knight: Treasure Trove",
         link: "://www.yachtclubgames.com/games/shovel-knight-treasure-trove/",
         start_date: "July 27 2025",
         end_date: null,
-        status: "current",
+        status: "past",
       },
       {
         name: "Death Stranding",
