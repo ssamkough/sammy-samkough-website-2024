@@ -1,15 +1,15 @@
 import type { Arts } from "./types";
 
 export const TITLES = {
-  home: "home",
-  about: "about",
-  notes: "notes",
-  works: "works",
-  projects: "projects",
-  activism: "activism",
-  contact: "contact",
-  arts: "arts",
-  colophon: "colophon",
+  home: "Home",
+  about: "About",
+  notes: "Notes",
+  works: "Works",
+  projects: "Projects",
+  activism: "Activism",
+  contact: "Contact",
+  arts: "Arts",
+  colophon: "Colophon",
   404: "404",
 } as const;
 
@@ -25,55 +25,55 @@ interface NavigationItem {
 
 export const NAVIGATION: NavigationItem[] = [
   {
-    title: "home",
+    title: "Home",
     path: "/",
     color: "#2ecf12ff",
     backgroundColor: "#cb7418ff",
   },
   {
-    title: "about",
+    title: "About",
     path: "/about",
     color: "#FFDA10",
     backgroundColor: "#1B8F17",
   },
   {
-    title: "notes",
+    title: "Notes",
     path: "/notes",
     color: "#BAF9FF",
     backgroundColor: "#FF1616",
   },
   {
-    title: "works",
+    title: "Works",
     path: "/works",
     color: "#FF95E9",
     backgroundColor: "#BAFFC5",
   },
   {
-    title: "projects",
+    title: "Projects",
     path: "/projects",
     color: "#776BFF",
     backgroundColor: "#FFF4BA",
   },
   {
-    title: "activism",
+    title: "Activism",
     path: "/activism",
     color: "#FF1616",
     backgroundColor: "#FFAD64",
   },
   {
-    title: "contact",
+    title: "Contact",
     path: "/contact",
     color: "#FFEBBA",
     backgroundColor: "#A378F3",
   },
   {
-    title: "arts",
+    title: "Arts",
     path: "/arts",
     color: "#03e8fc",
     backgroundColor: "#f76fc1",
   },
   {
-    title: "colophon",
+    title: "Colophon",
     path: "/colophon",
     color: "#2d2b24ff",
     backgroundColor: "#a69b81ff",

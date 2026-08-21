@@ -8,8 +8,8 @@ const allPosts = await getCollection("notes");
 ---
 
 <PageLayout title={TITLES.notes}>
-  <p><a href="/notes/rss.xml">rss feed</a></p>
-  <p>list of notes:</p>
+  <p><a href="/notes/rss.xml">RSS feed</a></p>
+  <p>List of notes:</p>
   <ul>
     {
       allPosts.map((post) => (

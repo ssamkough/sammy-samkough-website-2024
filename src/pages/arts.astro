@@ -6,11 +6,11 @@ import { ARTS, TITLES } from "../utils/constants";
 
 <PageLayout title={TITLES.arts}>
   <p>
-    <strong>arts</strong> that i'm currently engaging with, must engage with, or have
-    engaged with
+    <strong>Arts</strong> that i'm currently engaging with, must engage with, or have
+    engaged with.
   </p>
 
-  <h3>table of contents</h3>
+  <h3>Table of contents</h3>
   <ul>
     <li><a href="#current">current</a></li>
     <li><a href="#must">must</a></li>
@@ -20,19 +20,19 @@ import { ARTS, TITLES } from "../utils/constants";
   <hr />
 
   <h2 id="current">current</h2>
-  <p>here are arts i currently / recently engaged with:</p>
+  <p>Arts I currently / recently engaged with:</p>
   <ArtsList status="current" arts={ARTS} />
 
   <br />
 
   <h2 id="must">must</h2>
-  <p>here are arts i must get to:</p>
+  <p>Arts I must get to:</p>
   <ArtsList status="must" arts={ARTS} />
 
   <br />
 
   <h2 id="past">past</h2>
-  <p>here are arts ive engaged with in the past:</p>
+  <p>Arts I've engaged with in the past:</p>
   <ArtsList status="past" arts={ARTS} />
 
   <br />
