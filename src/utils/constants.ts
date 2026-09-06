@@ -54,12 +54,12 @@ export const NAVIGATION: NavigationItem[] = [
     color: "#776BFF",
     backgroundColor: "#FFF4BA",
   },
-  {
-    title: "Activism",
-    path: "/activism",
-    color: "#FF1616",
-    backgroundColor: "#FFAD64",
-  },
+  // {
+  //   title: "Activism",
+  //   path: "/activism",
+  //   color: "#FF1616",
+  //   backgroundColor: "#FFAD64",
+  // },
   {
     title: "Contact",
     path: "/contact",
