@@ -3,13 +3,60 @@ import PageLayout from "../layouts/PageLayout.astro";
 ---
 
 <PageLayout title="Circassian">
-  <div class="flag"></div>
+  <div class="flag">
+    <!-- STARS -->
+    <!-- Left side -->
+    <div class="star" style="bottom: 40px; left: 50px"></div>
+    <div class="star" style="bottom: 70px; left: 70px"></div>
+    <div class="star" style="bottom: 100px; left: 90px"></div>
+    <div class="star" style="bottom: 130px; left: 110px"></div>
+
+    <!-- Middle center -->
+    <div class="star" style="bottom: 110px; left: 135px"></div>
+    <div class="star" style="bottom: 110px; left: 165px"></div>
+    <div class="star" style="bottom: 110px; left: 195px"></div>
+
+    <!-- Top center -->
+    <div class="star" style="bottom: 140px; left: 165px"></div>
+
+    <!-- Right side -->
+    <div class="star" style="bottom: 40px; right: 50px"></div>
+    <div class="star" style="bottom: 70px; right: 70px"></div>
+    <div class="star" style="bottom: 100px; right: 90px"></div>
+    <div class="star" style="bottom: 130px; right: 110px"></div>
+
+    <!-- ARROWS -->
+    <div
+      class="arrow"
+      style="bottom: 20px; left: 155px; transform: rotate(45deg);"
+    >
+    </div>
+    <div class="arrow" style="bottom: 20px; left: 165px;"></div>
+    <div
+      class="arrow"
+      style="bottom: 20px; left: 175px; transform: rotate(-45deg);"
+    >
+    </div>
+  </div>
 </PageLayout>
 
 <style>
   .flag {
+    position: relative;
     width: 330px;
     height: 165px;
     background-color: #296912;
+  }
+  .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ecf003;
+  }
+  .arrow {
+    position: absolute;
+    background-color: #ecf003;
+    width: 8px;
+    height: 80px;
   }
 </style>
