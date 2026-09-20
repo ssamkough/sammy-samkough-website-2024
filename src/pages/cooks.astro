@@ -12,7 +12,10 @@ import { TITLES } from "../utils/constants";
         width="300"
         height="400"
       />
-      <figcaption>Marinated chicken with ready-made salad</figcaption>
+      <figcaption>
+        Marinated chicken w/ basmati rice and ready-made salad
+      </figcaption>
+      <date>2026-09-19</date>
     </figure>
     <figure>
       <img
@@ -22,6 +25,7 @@ import { TITLES } from "../utils/constants";
         height="400"
       />
       <figcaption>Marinated chicken with salad and mashed potatoes</figcaption>
+      <date>2026-09-15</date>
     </figure>
     <figure>
       <img
@@ -30,16 +34,25 @@ import { TITLES } from "../utils/constants";
         width="300"
         height="400"
       />
-      <figcaption>Fish with asparagus and potatoes</figcaption>
+      <figcaption>Salmon fish with asparagus and flavorful potatoes</figcaption>
+      <date>2026-09-14</date>
     </figure>
   </div>
 </FullLayout>
 
 <style>
   div {
+    margin-top: 0.4em;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     row-gap: 2em;
     column-gap: 2em;
+  }
+  figure {
+    border: 4px dotted saddlebrown;
+    padding: 1em;
+  }
+  date {
+    font-style: italic;
   }
 </style>
