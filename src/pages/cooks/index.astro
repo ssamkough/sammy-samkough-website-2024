@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content";
+import FullLayout from "../../layouts/FullLayout.astro";
+import { TITLES } from "../../utils/constants";
+
+const cookEntries = await getCollection("cooks");
+---
+
+<FullLayout title={TITLES.cooks}>
+  <div>
+    {
+      cookEntries.map((cook) => (
+        <a href={`/cooks/${cook.slug}`}>
+          <figure>
+            <img
+              src={`/cooks/${cook.slug}.jpeg`}
+              alt={`${cook.data.description}`}
+              width="320"
+              height="400"
+            />
+            <figcaption>{cook.data.description}</figcaption>
+            <date>{cook.data.publishedDate}</date>
+          </figure>
+        </a>
+      ))
+    }
+  </div>
+</FullLayout>
+
+<style>
+  div {
+    margin-top: 0.4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    row-gap: 2em;
+    column-gap: 2em;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    border: 2px dotted saddlebrown;
+  }
+  a:hover,
+  a:focus {
+    background: lightcyan;
+    border: 1px dotted saddlebrown;
+    outline: 1px dotted saddlebrown;
+  }
+  figure {
+    padding: 0.8em;
+  }
+  date {
+    font-style: italic;
+  }
+</style>

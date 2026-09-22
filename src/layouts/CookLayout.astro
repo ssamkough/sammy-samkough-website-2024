@@ -1,0 +1,32 @@
+---
+import FullLayout from "./FullLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<FullLayout title={frontmatter.title}>
+  <div class="container">
+    <article>
+      <slot />
+    </article>
+    <div>
+      <img
+        src={`/cooks/${frontmatter.publishedDate}.jpeg`}
+        alt={`${frontmatter.description}`}
+        width="320"
+        height="400"
+      />
+    </div>
+  </div>
+</FullLayout>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    grid-gap: 1em;
+  }
+  article {
+    margin-inline: 2em;
+  }
+</style>
