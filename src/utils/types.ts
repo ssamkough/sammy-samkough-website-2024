@@ -1,5 +1,7 @@
 export interface TitleProps {
   title: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 type ArtCategory =
