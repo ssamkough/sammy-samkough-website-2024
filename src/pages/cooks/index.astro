@@ -9,7 +9,7 @@ const cookEntries = await getCollection("cooks");
 <FullLayout title={TITLES.cooks}>
   <div>
     {
-      cookEntries.map((cook) => (
+      cookEntries.reverse().map((cook) => (
         <a href={`/cooks/${cook.slug}`}>
           <figure>
             <img
