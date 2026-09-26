@@ -7,6 +7,11 @@ const cookEntries = await getCollection("cooks");
 ---
 
 <FullLayout title={TITLES.cooks}>
+  <h2>Catalog</h2>
+  <p>
+    This is a collection of foods that I cooked / baked (by myself or with help)
+    that I feel proud enough to share with their recipes.
+  </p>
   <div>
     {
       cookEntries.reverse().map((cook) => (
@@ -25,6 +30,15 @@ const cookEntries = await getCollection("cooks");
       ))
     }
   </div>
+  <h2>Learnings</h2>
+  <ul>
+    <li>"Simmer" means to keep the heat to a 5 (in the middle).</li>
+    <li>Keep a garbage near you so you don't drop anything.</li>
+    <li>
+      When peeling a potato, slice the peel towards you with your thumb tucked
+      underneath (thx Timaf).
+    </li>
+  </ul>
 </FullLayout>
 
 <style>
