@@ -24,7 +24,7 @@ export async function GET(context) {
         description: cook.data.description,
 
         // must be valid date
-        pubDate: new Date(cook),
+        pubDate: new Date(cook.data.publishedDate),
 
         // Compute RSS link from post `slug`
         link: `/cooks/${cook.slug}`,
