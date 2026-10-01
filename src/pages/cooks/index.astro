@@ -4,10 +4,18 @@ import FullLayout from "../../layouts/FullLayout.astro";
 import { TITLES } from "../../utils/constants";
 
 const cookEntries = await getCollection("cooks");
+
+const randomCookEntries = [
+  {
+    description:
+      "Leftover chicken alfredo with fresh spaghetti and chicken (plus salad)",
+    publishedDate: "2026-09-30",
+  },
+];
 ---
 
 <FullLayout title={TITLES.cooks}>
-  <h2>Catalog</h2>
+  <h2><em>Official</em> Catalog</h2>
   <p>
     This is a collection of foods that I cooked / baked (by myself or with help)
     that I feel proud enough to share with their recipes.
@@ -30,6 +38,28 @@ const cookEntries = await getCollection("cooks");
       ))
     }
   </div>
+
+  <br />
+  <h2>Random</h2>
+  <div>
+    {
+      randomCookEntries.reverse().map((cook) => (
+        <a href={`/cooks/${cook.publishedDate}`}>
+          <figure>
+            <img
+              src={`/cooks/${cook.publishedDate}.jpeg`}
+              alt={`${cook.description}`}
+              width="320"
+              height="400"
+            />
+            <figcaption>{cook.description}</figcaption>
+            <date>{cook.publishedDate}</date>
+          </figure>
+        </a>
+      ))
+    }
+  </div>
+
   <br />
   <h2>Learnings</h2>
   <ul>
