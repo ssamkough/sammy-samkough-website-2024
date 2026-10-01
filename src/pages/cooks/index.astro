@@ -8,7 +8,7 @@ const cookEntries = await getCollection("cooks");
 const randomCookEntries = [
   {
     description:
-      "Leftover chicken alfredo with fresh spaghetti and chicken (plus salad)",
+      "Leftover chicken alfredo with fresh spaghetti and chicken (+ salad)",
     publishedDate: "2026-09-30",
   },
 ];
@@ -44,21 +44,23 @@ const randomCookEntries = [
   <div>
     {
       randomCookEntries.reverse().map((cook) => (
-        <a href={`/cooks/${cook.publishedDate}`}>
-          <figure>
-            <img
-              src={`/cooks/${cook.publishedDate}.jpeg`}
-              alt={`${cook.description}`}
-              width="320"
-              height="400"
-            />
-            <figcaption>{cook.description}</figcaption>
-            <date>{cook.publishedDate}</date>
-          </figure>
-        </a>
+        <figure style="border: 3px solid gray; background: lightgray">
+          <img
+            src={`/cooks/randoms/${cook.publishedDate}.jpeg`}
+            alt={`${cook.description}`}
+            width="320"
+            height="400"
+            style="border: 1px solid lightblue;"
+          />
+          <figcaption>{cook.description}</figcaption>
+          <date>{cook.publishedDate}</date>
+        </figure>
       ))
     }
   </div>
+
+  <br />
+  <hr style="max-width:400px; color: red;" />
 
   <br />
   <h2>Learnings</h2>
@@ -117,6 +119,10 @@ const randomCookEntries = [
   }
   figure {
     padding: 0.8em;
+  }
+  figcaption {
+    font-weight: 600;
+    margin-top: 4px;
   }
   date {
     font-style: italic;
