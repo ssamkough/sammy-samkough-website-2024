@@ -7,10 +7,11 @@ export const TITLES = {
   works: "Works",
   projects: "Projects",
   activism: "Activism",
-  contact: "Contact",
   arts: "Arts",
   cooks: "Cooks",
+  links: "Links",
   colophon: "Colophon",
+  contact: "Contact",
   404: "404",
 } as const;
 
@@ -62,12 +63,6 @@ export const NAVIGATION: NavigationItem[] = [
   //   backgroundColor: "#FFAD64",
   // },
   {
-    title: "Contact",
-    path: "/contact",
-    color: "#FFEBBA",
-    backgroundColor: "#A378F3",
-  },
-  {
     title: "Arts",
     path: "/arts",
     color: "#03e8fc",
@@ -80,10 +75,22 @@ export const NAVIGATION: NavigationItem[] = [
     backgroundColor: "#f4d7ad",
   },
   {
+    title: "Links",
+    path: "/links",
+    color: "rgb(132, 210, 31)",
+    backgroundColor: "rgb(94, 92, 88)",
+  },
+  {
     title: "Colophon",
     path: "/colophon",
     color: "#2d2b24ff",
     backgroundColor: "#a69b81ff",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    color: "#FFEBBA",
+    backgroundColor: "#A378F3",
   },
 ];
 
