@@ -5,6 +5,19 @@ import { TITLES } from "../../utils/constants";
 
 const cookEntries = await getCollection("cooks");
 
+const timafCookEntries = [
+  {
+    description:
+      "Beef stew on a plate of mashed potatoes with some yummy gravy (a la Timaf)",
+    publishedDate: "2026-11-16",
+  },
+  {
+    description:
+      "Beef stew on a plate of mashed potatoes with some yummy gravy (a la Timaf)",
+    publishedDate: "2026-11-18",
+  },
+]
+
 const randomCookEntries = [
   {
     description:
@@ -25,11 +38,6 @@ const randomCookEntries = [
     description:
       "Steak bites on some mashed potatoes, with salad, glazed carrots and corn",
     publishedDate: "2026-10-30",
-  },
-  {
-    description:
-      "Beef stew on a plate of mashed potatoes with some yummy gravy (a la Timaf)",
-    publishedDate: "2026-11-16",
   },
 ];
 ---
@@ -55,6 +63,26 @@ const randomCookEntries = [
             <date>{cook.data.publishedDate}</date>
           </figure>
         </a>
+      ))
+    }
+  </div>
+
+  <br />
+  <h2>TIMAF Creations ♡</h2>
+  <div>
+    {
+      timafCookEntries.reverse().map((cook) => (
+        <figure style="border: 3px dotted rgb(239, 255, 98); background: rgb(136, 209, 255)">
+          <img
+            src={`/cooks/timafs/${cook.publishedDate}.jpeg`}
+            alt={`${cook.description}`}
+            width="320"
+            height="400"
+            style="border: 1px solid rgb(34, 146, 183);"
+          />
+          <figcaption>{cook.description}</figcaption>
+          <date>{cook.publishedDate}</date>
+        </figure>
       ))
     }
   </div>
