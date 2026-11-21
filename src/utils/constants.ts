@@ -9,6 +9,7 @@ export const TITLES = {
   activism: "Activism",
   arts: "Arts",
   cooks: "Cooks",
+  people: "People",
   links: "Links",
   colophon: "Colophon",
   contact: "Contact",
@@ -73,6 +74,12 @@ export const NAVIGATION: NavigationItem[] = [
     path: "/cooks",
     color: "#7dad61",
     backgroundColor: "#f4d7ad",
+  },
+  {
+    title: "People",
+    path: "/People",
+    color: "rgb(210, 31, 31)",
+    backgroundColor: "rgb(255, 240, 253)",
   },
   {
     title: "Links",
